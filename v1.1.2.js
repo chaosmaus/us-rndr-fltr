@@ -432,7 +432,7 @@ $(document).ready(function () {
               type: "FeatureCollection",
             };
             map.getSource("locations").setData(stores);
-            
+            buildLocationList(stores);
           } else {
             setTimeout(() => {
               checkAndRefreshMap();
