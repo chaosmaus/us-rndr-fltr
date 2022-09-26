@@ -432,6 +432,12 @@ $(document).ready(function () {
               type: "FeatureCollection",
             };
             map.getSource("locations").setData(stores);
+
+            stores.features.forEach(function (store, i) {
+              store.properties.id = i;
+            });
+        
+
             buildLocationList(stores);
           } else {
             setTimeout(() => {

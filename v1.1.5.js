@@ -217,9 +217,9 @@ $(document).ready(function () {
     }
 
     function buildLocationList(stores) {
-      for (const [i, store] of stores.features.entries()) {
-        const listings = $("#listings");
-        const listing = listings.find(".item");
+      for (let [i, store] of stores.features.entries()) {
+        let listings = $("#listings");
+        let listing = listings.find(".item");
         if (!listing.hasClass("hidden")) {
           listing[i].id = `listing-${store.properties.id}`;
           currentListing = listing[i];
@@ -227,13 +227,13 @@ $(document).ready(function () {
             element.id = `link-${index}`;
           });
           $(listing[i]).on("click", function () {
-            for (const feature of stores.features) {
+            for (let feature of stores.features) {
               if (this.id === `listing-${feature.properties.id}`) {
                 flyToStore(feature);
                 createPopUp(feature);
               }
             }
-            const activeItem = document.getElementsByClassName("active");
+            let activeItem = document.getElementsByClassName("active");
             if (activeItem[0]) {
               activeItem[0].classList.remove("active");
             }
@@ -413,7 +413,7 @@ $(document).ready(function () {
           .addTo(map);
       });
 
-      // ------------- REFRESH MAP --------------- // 
+      // ------------- REFRESH MAP --------------- //
       /* 
       What I was doing before:
       - deleting the map and recalling it's function
@@ -431,8 +431,39 @@ $(document).ready(function () {
               features: loadData(),
               type: "FeatureCollection",
             };
+
+/*            
+
+            for (let [i, store] of stores.features.entries()) {
+              let listings = $("#listings");
+              let listing = listings.find(".item");
+              if (!listing.hasClass("hidden")) {
+                listing[i].id = `listing-${store.properties.id}`;
+                currentListing = listing[i];
+                $(".title").each((index, element) => {
+                  element.id = `link-${index}`;
+                });
+                $(listing[i]).on("click", function () {
+                  for (let feature of stores.features) {
+                    if (this.id === `listing-${feature.properties.id}`) {
+                      flyToStore(feature);
+                      createPopUp(feature);
+                    }
+                  }
+                  let activeItem = document.getElementsByClassName("active");
+                  if (activeItem[0]) {
+                    activeItem[0].classList.remove("active");
+                  }
+                  this.classList.add("active");
+                });
+              }
+
+              stores.features.forEach(function (store, i) {
+                store.properties.id = i;
+              });
+            } */
+
             map.getSource("locations").setData(stores);
-            buildLocationList(stores);
           } else {
             setTimeout(() => {
               checkAndRefreshMap();
@@ -470,10 +501,9 @@ $(document).ready(function () {
     }
   };
 
-  localStorage.setItem("filter", '')
+  localStorage.setItem("filter", "");
   mapInitializer();
   //initialize
-  
 
   // CLICK BUTTON LISTENER
   $(".submit-button").on("click", () => {
