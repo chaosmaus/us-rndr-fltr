@@ -1,0 +1,112 @@
+{
+  "status": 200,
+  "data": {
+    "days": [
+      {
+        "date": "2022-10-23",
+        "listingId": "60d9ebdf770e45002df2d019",
+        "currency": "USD",
+        "price": 1157,
+        "isBasePrice": false,
+        "minNights": 2,
+        "isBaseMinNights": false,
+        "status": "available",
+        "blocks": {
+          "m": false,
+          "r": false,
+          "b": false,
+          "bd": false,
+          "sr": false,
+          "abl": false,
+          "a": false,
+          "bw": false,
+          "o": false,
+          "pt": false
+        },
+        "blockRefs": [],
+        "cta": false,
+        "ctd": false,
+        "notDefaultAvailability": true
+      },
+      {
+        "date": "2022-10-24",
+        "listingId": "60d9ebdf770e45002df2d019",
+        "currency": "USD",
+        "price": 373,
+        "isBasePrice": false,
+        "minNights": 2,
+        "isBaseMinNights": false,
+        "status": "available",
+        "blocks": {
+          "m": false,
+          "r": false,
+          "b": false,
+          "bd": false,
+          "sr": false,
+          "abl": false,
+          "a": false,
+          "bw": false,
+          "o": false,
+          "pt": false
+        },
+        "blockRefs": [],
+        "cta": false,
+        "ctd": false,
+        "notDefaultAvailability": true
+      },
+      {
+        "date": "2022-10-25",
+        "listingId": "60d9ebdf770e45002df2d019",
+        "currency": "USD",
+        "price": 327,
+        "isBasePrice": false,
+        "minNights": 2,
+        "isBaseMinNights": false,
+        "status": "available",
+        "blocks": {
+          "m": false,
+          "r": false,
+          "b": false,
+          "bd": false,
+          "sr": false,
+          "abl": false,
+          "a": false,
+          "bw": false,
+          "o": false,
+          "pt": false
+        },
+        "blockRefs": [],
+        "cta": false,
+        "ctd": false,
+        "notDefaultAvailability": true
+      },
+      {
+        "date": "2022-10-26",
+        "listingId": "60d9ebdf770e45002df2d019",
+        "currency": "USD",
+        "price": 402,
+        "isBasePrice": false,
+        "minNights": 2,
+        "isBaseMinNights": false,
+        "status": "available",
+        "blocks": {
+          "m": false,
+          "r": false,
+          "b": false,
+          "bd": false,
+          "sr": false,
+          "abl": false,
+          "a": false,
+          "bw": false,
+          "o": false,
+          "pt": false
+        },
+        "blockRefs": [],
+        "cta": false,
+        "ctd": false,
+        "notDefaultAvailability": true
+      }
+    ]
+  },
+  "message": "OK"
+}

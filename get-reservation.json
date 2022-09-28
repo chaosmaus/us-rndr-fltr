@@ -1,0 +1,765 @@
+{
+    "_id": "60d9ebdf770e45002df2d019",
+    "SaaS": {
+      "autoRenew": true,
+      "expiresAt": "2022-10-05T05:00:00.000Z"
+    },
+    "picture": {
+      "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1652543232/production/5eab0012153fe5002d275b84/ueyrna1mnrhjvbe3hrwd.jpg"
+    },
+    "terms": {
+      "minNights": 3,
+      "maxNights": 45
+    },
+    "prices": {
+      "monthlyPriceFactor": 1,
+      "weeklyPriceFactor": 1,
+      "currency": "USD",
+      "basePrice": 777,
+      "cleaningFee": 289,
+      "weekendBasePrice": null
+    },
+    "pms": {
+      "automation": {
+        "answeringMachine": {
+          "confirmedBeforeCheckIn": {
+            "delayInMinutes": 45
+          },
+          "confirmedDayOfCheckIn": {
+            "delayInMinutes": 45
+          },
+          "confirmedDayOfCheckOut": {
+            "delayInMinutes": 45
+          },
+          "confirmedDuringStay": {
+            "delayInMinutes": 45
+          },
+          "confirmedAfterCheckOut": {
+            "delayInMinutes": 45
+          },
+          "unconfirmedFirstMessage": {
+            "delayInMinutes": 55
+          },
+          "unconfirmedSubsequentMessage": {
+            "delayInMinutes": 45
+          }
+        },
+        "hooks": {
+          "ignoredHooks": [],
+          "active": true
+        },
+        "calendarSmartRules": {
+          "blockListings": []
+        },
+        "autoReviews": {
+          "templates": [
+            "What more can I say, {{guest_first}} left the house in great shape! Super respectful and tidy, we couldn't recommend {{guest_first}} highly enough. An absolute pleasure to host, and welcome back anytime!",
+            "{{guest_first}} was a great guest. Communication was as smooth as can be, the place was left in great condition :)",
+            "Great guest! {{guest_first}} was respectful of the space and left the home clean. We'd be super happy to welcome {{guest_first}} back anytime. Highly recommended!"
+          ],
+          "starRating": 5,
+          "daysBeforeSending": 0,
+          "active": true
+        },
+        "autoPricing": {
+          "rules": []
+        }
+      },
+      "tasks": {
+        "defaultTasks": []
+      },
+      "autoPayments": {
+        "policy": [
+          {
+            "scheduleTo": {
+              "timeRelation": {
+                "relation": "AT",
+                "unit": "HOURS",
+                "amount": 1
+              },
+              "reservationEvent": "CONFIRMATION"
+            },
+            "_id": "60da12da19a5f5002c704d8a",
+            "chargeType": "PERCENTAGE",
+            "amount": 100,
+            "useGuestCard": true
+          }
+        ]
+      },
+      "active": true
+    },
+    "sales": {
+      "salesService": {
+        "atPhones": []
+      }
+    },
+    "receptionistsService": {
+      "receptionDesk": {
+        "atPhones": [],
+        "ittt": [],
+        "textSupport": false,
+        "smsSupport": false,
+        "phoneSupport": false,
+        "whiteLabel": false,
+        "customSignature": "Cheers!\n\nAlex, with Urban Stay"
+      },
+      "screening": {
+        "checklist": [],
+        "goOverChecklist": false
+      },
+      "active": false
+    },
+    "calendarRules": {
+      "defaultAvailability": "AVAILABLE",
+      "advanceNotice": {
+        "bookingCom": {
+          "isCutOffHoursEnabled": false
+        },
+        "expedia": {
+          "isCutOffHoursEnabled": false
+        },
+        "airbnb2": {
+          "isCutOffHoursEnabled": true
+        },
+        "directBookings": {
+          "isCutOffHoursEnabled": false
+        },
+        "updatedAt": "2022-09-23T17:28:56.682Z",
+        "updatedBy": "tony@urbanstay.us"
+      },
+      "bookingWindow": {
+        "defaultSettings": {
+          "days": 240
+        },
+        "updatedAt": "2022-09-23T17:28:56.682Z",
+        "updatedBy": "tony@urbanstay.us"
+      },
+      "preparationTime": {
+        "updatedAt": "2022-09-23T17:28:56.682Z",
+        "updatedBy": "tony@urbanstay.us"
+      },
+      "rentalPeriods": [],
+      "defaultAvailabilityUpdatedAt": "2022-09-23T17:28:56.682Z",
+      "defaultAvailabilityUpdatedBy": "tony@urbanstay.us"
+    },
+    "type": "SINGLE",
+    "tags": [],
+    "owners": [
+      "61042f05566708002e9e2a2a"
+    ],
+    "amenities": [
+      "Air conditioning",
+      "Dishwasher",
+      "Dryer",
+      "Free parking on premises",
+      "Heating",
+      "Refrigerator",
+      "Stove",
+      "TV",
+      "Washer",
+      "Bed linens",
+      "Coffee maker",
+      "Dishes and silverware",
+      "Essentials",
+      "Extra pillows and blankets",
+      "Internet",
+      "Kitchen",
+      "Toaster",
+      "Towels provided",
+      "Swimming pool",
+      "Wireless Internet",
+      "Shampoo",
+      "Smoke detector",
+      "Private pool",
+      "Private entrance",
+      "Patio or balcony",
+      "Outdoor pool",
+      "Microwave",
+      "Carbon monoxide detector"
+    ],
+    "amenitiesNotIncluded": [],
+    "useAccountRevenueShare": false,
+    "netIncomeFormula": "host_payout",
+    "commissionFormula": "net_income*0.1+ fare_cleaning*0.1",
+    "ownerRevenueFormula": "net_income - pm_commission - fare_cleaning",
+    "useAccountAdditionalFees": true,
+    "useAccountTaxes": true,
+    "markups": {
+      "default": {
+        "amount": null,
+        "units": "PERCENTAGE"
+      },
+      "manual": {
+        "amount": 13,
+        "units": "PERCENTAGE",
+        "status": "MANUALLY_ALTERED"
+      }
+    },
+    "useAccountMarkups": false,
+    "active": true,
+    "preBooking": [],
+    "accommodates": 16,
+    "bedrooms": 4,
+    "beds": 9,
+    "bathrooms": 3,
+    "defaultCheckInTime": "16:00",
+    "defaultCheckOutTime": "10:00",
+    "propertyType": "House",
+    "roomType": "Entire home/apt",
+    "address": {
+      "full": "4611 Bolm Rd, Austin, TX 78702, USA",
+      "lng": -97.69750409999999,
+      "lat": 30.2612724,
+      "county": null,
+      "unit": null,
+      "street": "Bolm Road 4611",
+      "city": "Austin",
+      "country": "United States",
+      "zipcode": "78702",
+      "state": "Texas"
+    },
+    "pictures": [
+      {
+        "_id": "627fcf20c939a50034dcceb3",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1652543232/production/5eab0012153fe5002d275b84/ueyrna1mnrhjvbe3hrwd.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1652543232/production/5eab0012153fe5002d275b84/ueyrna1mnrhjvbe3hrwd.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 1279180
+      },
+      {
+        "_id": "614ac29185079a00324efedd",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289395/production/5eab0012153fe5002d275b84/wfymf8sjmhhmd8wlzxp8.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289395/production/5eab0012153fe5002d275b84/wfymf8sjmhhmd8wlzxp8.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 607422
+      },
+      {
+        "_id": "614ac29185079a00324efedc",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289395/production/5eab0012153fe5002d275b84/as94vodzseu4y6swvyly.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289395/production/5eab0012153fe5002d275b84/as94vodzseu4y6swvyly.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 667046
+      },
+      {
+        "_id": "614ac29185079a00324efedb",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289395/production/5eab0012153fe5002d275b84/y4qp1mnewvtrlbhd3gr1.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289395/production/5eab0012153fe5002d275b84/y4qp1mnewvtrlbhd3gr1.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 1009079
+      },
+      {
+        "_id": "614ac29185079a00324efeda",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289395/production/5eab0012153fe5002d275b84/e1q5c0kp3uehtk2mlazo.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289395/production/5eab0012153fe5002d275b84/e1q5c0kp3uehtk2mlazo.jpg",
+        "height": 2250,
+        "width": 3000,
+        "size": 1334094
+      },
+      {
+        "_id": "614ac29185079a00324efed9",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289396/production/5eab0012153fe5002d275b84/fagfoknqj2zk1ay4hncw.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289396/production/5eab0012153fe5002d275b84/fagfoknqj2zk1ay4hncw.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 561760
+      },
+      {
+        "_id": "614ac29185079a00324efed8",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289399/production/5eab0012153fe5002d275b84/ezur6fvaxdxwlih0lmw7.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289399/production/5eab0012153fe5002d275b84/ezur6fvaxdxwlih0lmw7.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 637732
+      },
+      {
+        "_id": "614ac29185079a00324efed7",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289399/production/5eab0012153fe5002d275b84/pyv1gpkcqf9lhmdeptyc.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289399/production/5eab0012153fe5002d275b84/pyv1gpkcqf9lhmdeptyc.jpg",
+        "height": 2003,
+        "width": 3000,
+        "size": 811067
+      },
+      {
+        "_id": "614ac29185079a00324efed6",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289399/production/5eab0012153fe5002d275b84/eynadqrks8m48xg9kgnh.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289399/production/5eab0012153fe5002d275b84/eynadqrks8m48xg9kgnh.jpg",
+        "height": 2250,
+        "width": 3000,
+        "size": 742318
+      },
+      {
+        "_id": "614ac29185079a00324efed5",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289399/production/5eab0012153fe5002d275b84/rx9atdweyedlnbngif2q.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289399/production/5eab0012153fe5002d275b84/rx9atdweyedlnbngif2q.jpg",
+        "height": 4500,
+        "width": 3000,
+        "size": 1343922
+      },
+      {
+        "_id": "614ac29185079a00324efed4",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289399/production/5eab0012153fe5002d275b84/weotia7gvdnwjlbhkgzv.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289399/production/5eab0012153fe5002d275b84/weotia7gvdnwjlbhkgzv.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 1047595
+      },
+      {
+        "_id": "614ac29185079a00324efed3",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289399/production/5eab0012153fe5002d275b84/qmhhe9jomjneppm7zhwd.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289399/production/5eab0012153fe5002d275b84/qmhhe9jomjneppm7zhwd.jpg",
+        "height": 2250,
+        "width": 3000,
+        "size": 753439
+      },
+      {
+        "_id": "614ac29185079a00324efed2",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289402/production/5eab0012153fe5002d275b84/hn3cvzyvigxiricqmbmf.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289402/production/5eab0012153fe5002d275b84/hn3cvzyvigxiricqmbmf.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 543980
+      },
+      {
+        "_id": "614ac29185079a00324efed1",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289402/production/5eab0012153fe5002d275b84/d8npymdsvogw7f4u2uq6.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289402/production/5eab0012153fe5002d275b84/d8npymdsvogw7f4u2uq6.jpg",
+        "height": 2250,
+        "width": 3000,
+        "size": 725642
+      },
+      {
+        "_id": "614ac29185079a00324efed0",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289402/production/5eab0012153fe5002d275b84/gzo1fmmkuilqprgisbjw.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289402/production/5eab0012153fe5002d275b84/gzo1fmmkuilqprgisbjw.jpg",
+        "height": 4731,
+        "width": 3000,
+        "size": 1555856
+      },
+      {
+        "_id": "614ac29185079a00324efecf",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289402/production/5eab0012153fe5002d275b84/uzy5mezw9cyhn20fdgbs.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289402/production/5eab0012153fe5002d275b84/uzy5mezw9cyhn20fdgbs.jpg",
+        "height": 2250,
+        "width": 3000,
+        "size": 1003084
+      },
+      {
+        "_id": "614ac29185079a00324efece",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289402/production/5eab0012153fe5002d275b84/wp6y4siutkiecicpjzce.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289402/production/5eab0012153fe5002d275b84/wp6y4siutkiecicpjzce.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 725126
+      },
+      {
+        "_id": "614ac29185079a00324efecd",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289402/production/5eab0012153fe5002d275b84/a0xziulmwiu25ed9a5mq.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289402/production/5eab0012153fe5002d275b84/a0xziulmwiu25ed9a5mq.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 833642
+      },
+      {
+        "_id": "614ac29185079a00324efecc",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289404/production/5eab0012153fe5002d275b84/b8jg3u4i7foipaagluce.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289404/production/5eab0012153fe5002d275b84/b8jg3u4i7foipaagluce.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 907564
+      },
+      {
+        "_id": "614ac29185079a00324efecb",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289405/production/5eab0012153fe5002d275b84/kabywkp6ps6d8g6pkb3q.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289405/production/5eab0012153fe5002d275b84/kabywkp6ps6d8g6pkb3q.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 667046
+      },
+      {
+        "_id": "614ac29185079a00324efeca",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289405/production/5eab0012153fe5002d275b84/uiraeodh9zh1itlcbzva.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289405/production/5eab0012153fe5002d275b84/uiraeodh9zh1itlcbzva.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 610913
+      },
+      {
+        "_id": "614ac29185079a00324efec9",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289406/production/5eab0012153fe5002d275b84/gpk4lw07ilwfbkleomh9.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289406/production/5eab0012153fe5002d275b84/gpk4lw07ilwfbkleomh9.jpg",
+        "height": 4500,
+        "width": 3000,
+        "size": 1824857
+      },
+      {
+        "_id": "614ac29185079a00324efec8",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289406/production/5eab0012153fe5002d275b84/jfm8ksjgwomh28fqz8bd.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289406/production/5eab0012153fe5002d275b84/jfm8ksjgwomh28fqz8bd.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 415465
+      },
+      {
+        "_id": "614ac29185079a00324efec7",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289406/production/5eab0012153fe5002d275b84/o1pdaqba2qz1it9ynu4g.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289406/production/5eab0012153fe5002d275b84/o1pdaqba2qz1it9ynu4g.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 543551
+      },
+      {
+        "_id": "614ac29185079a00324efec6",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289408/production/5eab0012153fe5002d275b84/f0vdtebywjwjctqpdgza.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289408/production/5eab0012153fe5002d275b84/f0vdtebywjwjctqpdgza.jpg",
+        "height": 2003,
+        "width": 3000,
+        "size": 434356
+      },
+      {
+        "_id": "614ac29185079a00324efec5",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289408/production/5eab0012153fe5002d275b84/s4y3cckfbtafy5liebub.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289408/production/5eab0012153fe5002d275b84/s4y3cckfbtafy5liebub.jpg",
+        "height": 4500,
+        "width": 3000,
+        "size": 1082289
+      },
+      {
+        "_id": "614ac29185079a00324efec4",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289408/production/5eab0012153fe5002d275b84/o5n0kzuwfh3qnjqnaa1e.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289408/production/5eab0012153fe5002d275b84/o5n0kzuwfh3qnjqnaa1e.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 413048
+      },
+      {
+        "_id": "614ac29185079a00324efec3",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289409/production/5eab0012153fe5002d275b84/osvwo190kw28qrqc2z8g.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289409/production/5eab0012153fe5002d275b84/osvwo190kw28qrqc2z8g.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 1009079
+      },
+      {
+        "_id": "614ac29185079a00324efec2",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289409/production/5eab0012153fe5002d275b84/ald2ru1n0jlky0alfu4a.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289409/production/5eab0012153fe5002d275b84/ald2ru1n0jlky0alfu4a.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 967134
+      },
+      {
+        "_id": "614ac29185079a00324efec1",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289409/production/5eab0012153fe5002d275b84/ghmv7mtimxa63dkjkpo0.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289409/production/5eab0012153fe5002d275b84/ghmv7mtimxa63dkjkpo0.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 968184
+      },
+      {
+        "_id": "614ac29185079a00324efec0",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289410/production/5eab0012153fe5002d275b84/yjgttkcs0yjwjimhh9ck.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289410/production/5eab0012153fe5002d275b84/yjgttkcs0yjwjimhh9ck.jpg",
+        "height": 2250,
+        "width": 3000,
+        "size": 795097
+      },
+      {
+        "_id": "614ac29185079a00324efebf",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289411/production/5eab0012153fe5002d275b84/w7crdghiydiihcnojv8w.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289411/production/5eab0012153fe5002d275b84/w7crdghiydiihcnojv8w.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 315077
+      },
+      {
+        "_id": "614ac29185079a00324efebe",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289412/production/5eab0012153fe5002d275b84/euqnupk9wkvmntevswbu.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289412/production/5eab0012153fe5002d275b84/euqnupk9wkvmntevswbu.jpg",
+        "height": 2250,
+        "width": 3000,
+        "size": 881516
+      },
+      {
+        "_id": "614ac29185079a00324efebd",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289412/production/5eab0012153fe5002d275b84/prm8u0ntsl0jjsdluurc.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289412/production/5eab0012153fe5002d275b84/prm8u0ntsl0jjsdluurc.jpg",
+        "height": 1949,
+        "width": 3000,
+        "size": 326020
+      },
+      {
+        "_id": "614ac29185079a00324efebc",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289413/production/5eab0012153fe5002d275b84/j4bffvbubt4bendhvemq.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289413/production/5eab0012153fe5002d275b84/j4bffvbubt4bendhvemq.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 561760
+      },
+      {
+        "_id": "614ac29185079a00324efebb",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289413/production/5eab0012153fe5002d275b84/manncklmm5g5h1fkfb01.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289413/production/5eab0012153fe5002d275b84/manncklmm5g5h1fkfb01.jpg",
+        "height": 2000,
+        "width": 3000,
+        "size": 1270309
+      },
+      {
+        "_id": "614ac29185079a00324efeba",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289414/production/5eab0012153fe5002d275b84/al8chidtxjoslfqa6mne.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289414/production/5eab0012153fe5002d275b84/al8chidtxjoslfqa6mne.jpg",
+        "height": 2250,
+        "width": 3000,
+        "size": 1239814
+      },
+      {
+        "_id": "614ac29185079a00324efeb9",
+        "original": "https://res.cloudinary.com/guesty/image/upload/v1632289414/production/5eab0012153fe5002d275b84/eyumoklmhzw3qgpfh34e.jpg",
+        "thumbnail": "https://res.cloudinary.com/guesty/image/upload/c_fit,h_200/v1632289414/production/5eab0012153fe5002d275b84/eyumoklmhzw3qgpfh34e.jpg",
+        "height": 2250,
+        "width": 3000,
+        "size": 1360779
+      }
+    ],
+    "timezone": "America/Chicago",
+    "nickname": "4611 Bolm",
+    "title": "Pool + Hot Tub Palace",
+    "accountId": "5eab0012153fe5002d275b84",
+    "createdAt": "2021-06-28T15:33:51.397Z",
+    "lastUpdatedAt": "2022-09-27T20:52:14.309Z",
+    "integrations": [
+      {
+        "airbnb2": {
+          "daysOfWeekMinimumNights": [],
+          "promotions": [],
+          "status": "COMPLETED",
+          "cancellationPolicy": "super_strict_60",
+          "instantBookingAllowedCategory": "everyone",
+          "syncCategory": "sync_rates_and_availability",
+          "syncCategoryUpdatedAt": "2021-06-28T15:52:27.926Z",
+          "id": "50696116",
+          "financials": {
+            "cleaningFee": {
+              "channelSyncStatus": "IN_PROGRESS",
+              "value": {
+                "_id": "62269a4ebf2257003422f5cc",
+                "multiplier": "PER_STAY",
+                "formula": 289,
+                "valueType": "FIXED"
+              },
+              "status": "MANUALLY_ALTERED"
+            },
+            "_id": "60da0bbc68ddaf002c3c33a6"
+          }
+        },
+        "bookingCom": {
+          "acceptedCreditCards": [],
+          "errors": [],
+          "initialComplexListing": false,
+          "publishCompanyLogo": false,
+          "isPublishedCompanyLogo": false,
+          "publishCompanyInfo": false,
+          "isPublishedCompanyInfo": false,
+          "taxInfo": []
+        },
+        "platform": "airbnb2",
+        "_id": "5eb2d3944c95b500298923bd",
+        "externalUrl": "https://www.airbnb.com/rooms/50696116"
+      },
+      {
+        "bookingCom": {
+          "acceptedCreditCards": [],
+          "errors": [],
+          "initialComplexListing": false,
+          "publishCompanyLogo": true,
+          "isPublishedCompanyLogo": true,
+          "publishCompanyInfo": false,
+          "isPublishedCompanyInfo": false,
+          "taxInfo": [],
+          "status": "ACTIVE",
+          "cancellationPolicy": "NON_REFUNDABLE",
+          "isPublishedByGuesty": true,
+          "acceptedPaymentMethod": "GUESTY",
+          "currency": "USD",
+          "contactPhone": "+15404559521",
+          "collectCvcDetails": true,
+          "childrenOccupancy": {
+            "quantity": 0,
+            "maxAge": 17,
+            "minAge": 1,
+            "chargeAmount": 0
+          },
+          "hotelId": 7490792,
+          "id": 749079202,
+          "license": {
+            "requirements": {}
+          },
+          "rateId": 22653643,
+          "financials": {
+            "_id": "61ad6c2a9c98eb003434c328",
+            "cleaningFee": {
+              "channelSyncStatus": "SUCCESS",
+              "value": {
+                "_id": "62269a4ebf2257003422f5cf",
+                "multiplier": "PER_STAY",
+                "formula": 289,
+                "valueType": "FIXED"
+              }
+            }
+          }
+        },
+        "airbnb2": {
+          "daysOfWeekMinimumNights": [],
+          "promotions": []
+        },
+        "platform": "bookingCom",
+        "_id": "6022d492f091ff002f0c0a1c",
+        "externalUrl": "https://booking.com/hotel/us/pool-pre-game-palace.en.html"
+      },
+      {
+        "homeaway2": {
+          "status": "COMPLETED",
+          "cancellationPolicy": "NO_REFUND",
+          "bookingPolicy": "INSTANT",
+          "pricingPolicy": "GUARANTEED",
+          "advertiserId": "LABryz",
+          "currency": "USD",
+          "acceptedPaymentForms": {
+            "methods": [
+              "STRIPE"
+            ],
+            "note": "Accepted forms of payment: Check, Cash, Debit Card, Credit Card,\nMaestro International, Maestro UK, Mastercard, and Visa."
+          },
+          "financials": {
+            "cleaningFee": {
+              "channelSyncStatus": "IN_PROGRESS",
+              "value": {
+                "_id": "62269a4ebf2257003422f5d2",
+                "multiplier": "PER_STAY",
+                "formula": 289,
+                "valueType": "FIXED"
+              }
+            },
+            "_id": "61ad6c2a9c98eb003434c32a"
+          }
+        },
+        "airbnb2": {
+          "daysOfWeekMinimumNights": [],
+          "promotions": []
+        },
+        "bookingCom": {
+          "acceptedCreditCards": [],
+          "errors": [],
+          "initialComplexListing": false,
+          "publishCompanyLogo": false,
+          "isPublishedCompanyLogo": false,
+          "publishCompanyInfo": false,
+          "isPublishedCompanyInfo": false,
+          "taxInfo": []
+        },
+        "platform": "homeaway2",
+        "_id": "5fe90e6a65e461002fa2369d"
+      }
+    ],
+    "pendingTasks": [],
+    "listingRooms": [
+      {
+        "_id": "60d9ece0524a26002f862cf9",
+        "roomNumber": 1,
+        "beds": [
+          {
+            "_id": "60d9ece0524a26002f862cfa",
+            "type": "QUEEN_BED",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "_id": "60d9ece0524a26002f862cf7",
+        "roomNumber": 2,
+        "beds": [
+          {
+            "_id": "60d9ece0524a26002f862cf8",
+            "type": "QUEEN_BED",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "_id": "60d9ece0524a26002f862cf5",
+        "roomNumber": 3,
+        "beds": [
+          {
+            "_id": "60d9ece0524a26002f862cf6",
+            "type": "QUEEN_BED",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "_id": "60d9ece0524a26002f862cf3",
+        "roomNumber": 4,
+        "beds": [
+          {
+            "_id": "60d9ece0524a26002f862cf4",
+            "type": "KING_BED",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "taxes": [],
+    "customFields": [
+      {
+        "_id": "622c233d00b0600033b23cc4",
+        "fieldId": "622bbc82cb665100352604e2",
+        "value": "ADDRESS:\n4611 Bolm Rd, Austin, TX 78702\n\nPARKING:\nThere is one parking spot in the driveway. There should be enough room for another vehicle to park directly behind the first vehicle, blocking the first vehicle in. Additionally, there is space for 1-2 more vehicles to park on the gravel between the driveway and the fence. Total 3-4 parking spots. However, the first cars will be blocked in by the second cars\n\nWiFi ACCESS:\nName: UrbanStay\nNo Password\n\nPROPERTY ACCESS:\nThere is a digital keypad on the front door which will be automatically activated at your checkin time. We'll send your unique 4-digit entry code the morning of your check-in. So, whenever you arrive, you can let yourselves in and feel right at home"
+      },
+      {
+        "_id": "622c332bcb665100352bb98e",
+        "fieldId": "622c2eaefc99670037db9409",
+        "value": "ADDRESS:\n4611 Bolm Rd, Austin, TX 78702\n\nPARKING:\nThere is one parking spot in the driveway. There should be enough room for another vehicle to park directly behind the first vehicle, blocking the first vehicle in. Additionally, there is space for 1-2 more vehicles to park on the gravel between the driveway and the fence. Total 3-4 parking spots. However, the first cars will be blocked in by the second cars\n\nWiFi ACCESS:\nName: UrbanStay\nNo Password\n\nPROPERTY ACCESS:\nThere is a digital keypad on the front door which will be automatically activated at your checkin time. We'll send your unique 4-digit entry code in a separate message prior to check-in. So, whenever you arrive, you can let yourselves in and feel right at home"
+      }
+    ],
+    "offeredServices": [],
+    "importedAt": "2021-06-28T15:33:51.398Z",
+    "occupancyStats": [],
+    "__v": 412,
+    "isListed": true,
+    "publicDescription": {
+      "summary": "2020 was a year of self-reflection, social distancing, and learning how to spend time alone.\n\nGood thing its 2022 Baby.",
+      "space": "This house is prepped and primed to be your post-quarantine pre-game palace. Bring your friends, your family, and even your dog Todo (for a little extra pet fee of course) and have a good time around the fire pit. Scared of flames like me? Then maybe our crystal-clear pool is more your speed. Don't know how to swim like me? Then maybe play some croquet in the yard or take a nap on our comfy hammock. Afraid of going outside like me? Then stay inside and hear the bass bump from our state-of-the-art Bose sound system.\n\nNo matter how long your list of phobias is, this house has something for you. Unless you're afraid of having a good ass time, then you're shit out of luck here!!"
+    },
+    "financials": {
+      "cleaningFee": {
+        "value": {
+          "_id": "62269a4ebf2257003422f5c8",
+          "multiplier": "PER_STAY",
+          "formula": 289,
+          "valueType": "FIXED"
+        },
+        "lastUpdated": "2022-03-07T23:50:38.605Z"
+      },
+      "petFee": {
+        "value": {
+          "_id": "62269a4ebf2257003422f5c9",
+          "formula": 0,
+          "valueType": "FIXED"
+        },
+        "lastUpdated": "2022-03-07T23:50:38.606Z"
+      }
+    },
+    "areaSquareFeet": 1700,
+    "contactPhone": "+15404559521",
+    "otaRoomType": "family",
+    "minimumAge": 18,
+    "lastActivityAt": "2022-09-15T01:07:44.118Z",
+    "cleaningStatus": {
+      "value": null,
+      "updatedAt": "2022-03-12T05:46:02.412Z"
+    },
+    "accountTaxes": []
+  }
