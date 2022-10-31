@@ -4,7 +4,7 @@ $(document).ready(function () {
       .request(options)
       .then(function (response) {
         //console.log("Then checkpoint");
-        //console.log(response.data.availability);
+        //console.log(response.data);
 
         filterController(response.data);
       })
@@ -26,18 +26,72 @@ $(document).ready(function () {
           //console.log(' same id')
           let totalPrice = 0;
           element.datePrice.forEach((intraEl, i2) => {
-            totalPrice += intraEl.price;
+            if(i2 + 1 < element.datePrice.length){
+              totalPrice += intraEl.price;
+            }
+            
           });
           //console.log('id: ', element.id);
           //console.log('total price: ',totalPrice );
+          let inputotal = totalPrice / (element.datePrice.length - 1)
+          inputotal = inputotal + inputotal*0.154;
           $(el)
             .find(".per-night")
-            .text(Math.round(totalPrice / element.datePrice.length));
+            .text(Math.round(inputotal));
+          $(el)
+            .find('#totalPrice')
+            .text(totalPrice*0.154);
         }
       });
     });
   };
+/*
+  function calculateTotal( price ){
+    price = Math.ceil(price + price * 0.154);
+    let procFee = PAYMENT PROCCESSING FEE ;
+    let priceString = price.toString();
 
+    if(priceString.length > 3){
+      console.log('nights selected', Number($('#night').text()));
+      console.log('price', price);
+      console.log('price per night', Math.ceil(price/Number($('#night').text())))
+        document.querySelector('#perNight').innerText = Math.ceil(price/(Number($('#night').text())));
+        priceString = priceString.split('');
+        priceString.splice(-3, 0, ',');
+        priceString = priceString.join('');
+        document.querySelector('#calcPrice').innerText = priceString;
+    } else {
+        document.querySelector('#calcPrice').innerText = price;
+        document.querySelector('#perNight').innerText = Math.ceil(price/Number($('#night').text()));
+    }
+    let total = (price +  CLEANING FEE );
+
+
+
+    //processing fee code
+
+    procFee = procFee*total*0.01
+    $('#processing-fee').text(Math.ceil(procFee))
+
+    if(!($('#percentage').hasClass('hidden')))$('#percentage').addClass('hidden');
+
+    $('#dollar-sign').removeClass('hidden');
+
+
+    total = Math.ceil(total + (total* PAYMENT PROCCESSING FEE  *0.01))
+
+     let totalString = total.toString();
+    if(totalString.length > 3){
+        totalString = totalString.split('');
+        totalString.splice(-3, 0, ',');
+        totalString = totalString.join('');
+        document.querySelector('#total').innerText = totalString;
+     } else {
+         let total = (price + CLEANING FEE  );
+        document.querySelector('#total').innerText = total;
+    }
+  }
+*/
   const priceParser = (availableDates, propertiesData) => {
     //console.log("available dates: ", availableDates);
     //console.log("properties data: ", propertiesData);
@@ -168,8 +222,9 @@ $(document).ready(function () {
             type: "fnac",
             guesty: $(element).find(".location-field_guesty").text(),
             title: $(element).find(".location-field_name").text(),
-            address: $(element).find(".location-field_address").text(),
+            //address: $(element).find(".location-field_address").text(),
             imgURL: $(element).find(".location-field_img").attr("src"),
+            link: $(element).find(".location-field_link").attr("href"),
           },
         });
       }
@@ -211,15 +266,15 @@ $(document).ready(function () {
       const popup = new mapboxgl.Popup({ closeOnClick: true })
         .setLngLat(currentFeature.geometry.coordinates)
         .setHTML(
-          `<h3>${currentFeature.properties.title}</h3><img loading="lazy" class="popup_img" alt src="${currentFeature.properties.imgURL}" >`
+          `<a href="${currentFeature.properties.link}" style="text-decoration: none;" ><h3>${currentFeature.properties.title}</h3><img loading="lazy" class="popup_img" alt src="${currentFeature.properties.imgURL}" ></a>`
         )
         .addTo(map);
     }
 
     function buildLocationList(stores) {
-      for (const [i, store] of stores.features.entries()) {
-        const listings = $("#listings");
-        const listing = listings.find(".item");
+      for (let [i, store] of stores.features.entries()) {
+        let listings = $("#listings");
+        let listing = listings.find(".item");
         if (!listing.hasClass("hidden")) {
           listing[i].id = `listing-${store.properties.id}`;
           currentListing = listing[i];
@@ -227,13 +282,13 @@ $(document).ready(function () {
             element.id = `link-${index}`;
           });
           $(listing[i]).on("click", function () {
-            for (const feature of stores.features) {
+            for (let feature of stores.features) {
               if (this.id === `listing-${feature.properties.id}`) {
                 flyToStore(feature);
                 createPopUp(feature);
               }
             }
-            const activeItem = document.getElementsByClassName("active");
+            let activeItem = document.getElementsByClassName("active");
             if (activeItem[0]) {
               activeItem[0].classList.remove("active");
             }
@@ -273,14 +328,14 @@ $(document).ready(function () {
         const popup = new mapboxgl.Popup({ closeOnClick: true })
           .setLngLat(newCoord)
           .setHTML(
-            ` <h3 id="cluster-pop-up" >Locations: ${featuresObject.length} </h3>  `
+            ` <span id="cluster-pop-up" > </span>  `
           )
           .addTo(map);
         let popUp = document.getElementById("cluster-pop-up");
         featuresObject.forEach((element, index) => {
           popUp.insertAdjacentHTML(
             "afterend",
-            `<div style="display:flex; border: 1px solid #f0f0f0; justify-content: space-between;" class="popup-wrapper"><h4>${element.properties.title}</h4> <img loading="lazy" class="popup_img" alt src="${element.properties.imgURL}" ></div>`
+            `<a href="${element.properties.link}" style="display:flex; border: 1px solid #f0f0f0; justify-content: space-between; text-decoration: none;" class="popup-wrapper"><h4>${element.properties.title}</h4> <img loading="lazy" class="popup_img" alt src="${element.properties.imgURL}" ></a>`
           );
         });
       } else {
@@ -407,19 +462,46 @@ $(document).ready(function () {
         const popup = new mapboxgl.Popup({ closeOnClick: true })
           .setLngLat(e.features[0].geometry.coordinates)
           .setHTML(
-            `<h3>${e.features[0].properties.title}</h3>
-            <img loading="lazy" class="popup_img" alt src="${e.features[0].properties.imgURL}" >`
+            `
+            <a style="text-decoration: none;" href="${e.features[0].properties.link}">
+            <h3>${e.features[0].properties.title}</h3>
+            <img loading="lazy" class="popup_img" alt src="${e.features[0].properties.imgURL}" >
+            </a>
+            `
           )
           .addTo(map);
       });
 
-      // ------------- REFRESH MAP --------------- // 
+      // ------------- REFRESH MAP --------------- //
       /* 
       What I was doing before:
-      - deleting the map and recalling it's function
+      - what I need is a initial run of the filter click
       - 
       
       */
+     const filterInit = () => {
+      let popUps = document.getElementsByClassName("mapboxgl-popup");
+      if (popUps[0]) popUps[0].remove();
+
+      const checkAndRefreshMap = () => {
+        if (localStorage.getItem("filter") === "ready") {
+          stores = {
+            features: loadData(),
+            type: "FeatureCollection",
+          };
+
+
+          map.getSource("locations").setData(stores);
+        } else {
+          setTimeout(() => {
+            checkAndRefreshMap();
+          }, 500);
+        }
+      };
+
+      checkAndRefreshMap();
+     }
+     filterInit();
 
       $(".submit-button").on("click", () => {
         let popUps = document.getElementsByClassName("mapboxgl-popup");
@@ -431,8 +513,9 @@ $(document).ready(function () {
               features: loadData(),
               type: "FeatureCollection",
             };
+
+
             map.getSource("locations").setData(stores);
-            buildLocationList(stores);
           } else {
             setTimeout(() => {
               checkAndRefreshMap();
@@ -458,7 +541,7 @@ $(document).ready(function () {
     });
   };
 
-  const mapInitializer = () => {
+/*   const mapInitializer = () => {
     if (localStorage.getItem("filter") === "ready") {
       setTimeout(() => {
         renderMap();
@@ -470,9 +553,11 @@ $(document).ready(function () {
     }
   };
 
-  mapInitializer();
+  localStorage.setItem("filter", "");
+  mapInitializer(); */
+  localStorage.setItem("filter", "");
+  renderMap();
   //initialize
-  
 
   // CLICK BUTTON LISTENER
   $(".submit-button").on("click", () => {
